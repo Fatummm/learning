@@ -1,6 +1,7 @@
 import time
 import telebot
 from threading import Thread
+import server
 
 from email_v2 import Email_box
 API_TOKEN = '5570030623:AAFDPz5Z9qkGU9xjfe3BjAOChqV3llOAhPI'
@@ -41,11 +42,13 @@ def checking(botik):
         for j in elem[1]:
             bot.send_document(905939371, j[0], visible_file_name=j[1])
 
-
+def email_checking():
+    start = time.time()
+    while True:
+        if time.time() - start > 5:
+            checking(bot)
 
 Thread(target=bot.infinity_polling).start()
-start = time.time()
-while True:
-    if time.time() - start > 5:
-        checking(bot)
+Thread(target=email_checking).start()
+Thread(target=server.start_server).start()
 
