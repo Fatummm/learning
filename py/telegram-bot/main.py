@@ -48,7 +48,7 @@ def email_checking():
         if time.time() - start > 60:
             checking(bot)
 
-Thread(target=bot.infinity_polling).start()
 Thread(target=email_checking).start()
 Thread(target=server.start_server).start()
+bot.infinity_polling()
 
