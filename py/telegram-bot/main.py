@@ -45,7 +45,7 @@ def checking(bot):
 def email_checking():
     start = time.time()
     while True:
-        if time.time() - start > 5:
+        if time.time() - start > 60:
             checking(bot)
 
 Thread(target=bot.infinity_polling).start()
