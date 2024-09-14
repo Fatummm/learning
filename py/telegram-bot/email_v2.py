@@ -1,8 +1,6 @@
 import email
 from email.header import decode_header
 import imaplib
-import base64
-import os
 
 def get_coding(topic):
     kodirovka = ''
