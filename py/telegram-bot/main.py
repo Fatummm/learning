@@ -1,6 +1,5 @@
 import time
 import telebot
-import asyncio
 from threading import Thread
 
 from email_v2 import Email_box
