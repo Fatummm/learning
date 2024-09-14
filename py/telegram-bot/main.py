@@ -38,17 +38,17 @@ def checking(botik):
     lst = my_em.check_unseen(my_em.get_unseen())
     for elem in lst:
         for i in elem[0]:
-            bot.send_message(905939371, i)
+            botik.send_message(905939371, i)
         for j in elem[1]:
-            bot.send_document(905939371, j[0], visible_file_name=j[1])
+            botik.send_document(905939371, j[0], visible_file_name=j[1])
 
-def email_checking():
+def email_checking(botik):
     start = time.time()
     while True:
         if time.time() - start > 5:
-            checking(bot)
+            checking(botik)
 
 Thread(target=bot.infinity_polling).start()
-Thread(target=email_checking).start()
+Thread(target=email_checking(bot)).start()
 Thread(target=server.start_server).start()
 
