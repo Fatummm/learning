@@ -1,40 +1,122 @@
 #include <iostream>
-#include <stdexcept>
-#include <vector>
 #include <memory>
+#include <string>
+#include <sstream>
 
-#include "animals.h"
+class Expression {
+public:
+    virtual int Evaluate() const = 0;
+    virtual std::string ToString() const = 0;
+    virtual ~Expression() {}
+};
 
-using Zoo = std::vector<std::shared_ptr<Animal>>;
 
-Zoo CreateZoo() {
-    Zoo zoo;
-    std::string word;
-    while (std::cin >> word) {
-        if (word == "Tiger") {
-            auto t = std::make_shared<Tiger>();
-            zoo.push_back(t);
-        }
-        else if (word == "Wolf") {
-            auto w = std::make_shared<Wolf>();
-            zoo.push_back(w);
-        }
-        else if (word == "Fox") {
-            auto f = std::make_shared<Fox>();
-            zoo.push_back(f);
-        }
-        else
-            throw std::runtime_error("Unknown animal!");
+using ExpressionPtr = std::shared_ptr<Expression>;
+
+class Constanta : public Expression {
+private:
+    std::string str_expr;
+    int evaluation;
+    
+public:
+
+    Constanta(int n) : evaluation(n) {
+        std::stringstream ss;
+        ss << evaluation;
+        str_expr = ss.str();
     }
-    return zoo;
+
+    int Evaluate() const override {
+        return evaluation;
+    }
+
+    std::string ToString() const override {
+        return str_expr;
+    }
+
+};
+
+ExpressionPtr Const(int n) {
+    return std::make_shared<Constanta>(Constanta(n));
 }
 
-void Process(const Zoo& zoo) {
-    for (const auto& animal : zoo) {
-        std::cout << animal->Voice() << "\n";
+
+
+class Summary : public Expression {
+private:
+    int evaluation;
+    std::string str_expr;
+
+public:
+    Summary(ExpressionPtr first, ExpressionPtr second) :
+        evaluation(first->Evaluate() + second->Evaluate()),
+        str_expr(first->ToString() + " + " + second->ToString()) {
+
     }
+
+
+    int Evaluate() const override {
+        return evaluation;
+    }
+
+    std::string ToString() const override {
+        return str_expr;
+    }
+};
+
+
+
+ExpressionPtr Sum(ExpressionPtr first, ExpressionPtr second) {
+    return std::make_shared<Summary>(Summary(first, second));
 }
+
+
+
+class Multiplication : public Expression {
+private:
+    int evaluation;
+    std::string str_expr;
+public:
+    Multiplication(ExpressionPtr first, ExpressionPtr second) :
+        evaluation(first->Evaluate()* second->Evaluate()) {
+        if (dynamic_cast<Summary*>(first.get())) {
+            str_expr = '(' + first->ToString() + ") * ";
+        }
+        else {
+            str_expr = first->ToString() + " * ";
+        }
+
+        if (dynamic_cast<Summary*>(second.get())) {
+            str_expr += '(' + second->ToString() + ")";
+        }
+        else {
+            str_expr += second->ToString();
+        }
+    }
+
+    int Evaluate() const override {
+        return evaluation;
+    }
+
+    std::string ToString() const override {
+        return str_expr;
+    }
+
+};
+
+ExpressionPtr Product(ExpressionPtr first, ExpressionPtr second) {
+    return std::make_shared<Multiplication>(Multiplication(first, second));
+}
+
+
 int main() {
-    auto zoo = CreateZoo();
-    Process(zoo);
+
+    ExpressionPtr ex = Const(5);
+    ExpressionPtr ex1 = Sum(Product(Const(3), Const(4)), Const(5));
+    std::cout << ex1->ToString() << "\n";  // 3 * 4 + 5
+    std::cout << ex1->Evaluate() << "\n";  // 17
+
+    ExpressionPtr ex2 = Product(Const(6), ex1);
+    std::cout << ex2->ToString() << "\n";  // 6 * (3 * 4 + 5)
+    std::cout << ex2->Evaluate() << "\n";  // 102
 }
