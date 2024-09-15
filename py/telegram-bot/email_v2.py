@@ -73,9 +73,7 @@ def check_message(msg):
     return [ans, files]
 
 class Email_box:
-    def __init__(self, user="dalepa@edu.hse.ru",
-                 pswrd="eyqwhchdwaprolrf",
-                 server="imap.yandex.ru"):
+    def __init__(self, user, pswrd, server):
         self.password = pswrd
         self.username = user
         self.server = server
