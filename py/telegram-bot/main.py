@@ -63,7 +63,7 @@ def polling():
             print("Error in bot.infinity_polling")
 
 Thread(target=email_checking).start()
-#Thread(target=server.start_server).start()
+Thread(target=server.start_server).start()
 #bot.polling()
 print(1)
 
