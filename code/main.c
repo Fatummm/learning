@@ -1,24 +1,28 @@
 #include <stdio.h>
-// symbols counting
-
-int scoreOfString(char* s) {
-    int sm = 0;
-    
-    while (*(s + 1)) {
-        if (*(s + 1) - *s >= 0) {
-            sm += (*(s + 1) - *s);
-        }
-        else {
-            sm += (*s - *(s + 1));
-        }
-        s++;
-    }
-    return sm;
-}
 
 int main()
 {
-    char s[] = "hello";
-    int sm = scoreOfString(s);
+    int s[100000];
+    for (int i = 0; i != 100000; ++i) {
+        s[i] = 0;
+    }
+
+    char input;
+    int index = 0;
+    while ((input = getchar()) != EOF) {
+        if (index != 0 && input == ' ' && 
+        (s[index - 1] == ' ' || s[index - 1] == 0)) {
+            s[index] = 0;
+        }
+        else {
+            s[index] = input;
+        }
+        index++;
+    }
+    for (int i = 0; i != 100000; ++i) {
+        if (s[i] != 0) {
+            putchar(s[i]);
+        }
+    }
     
 }

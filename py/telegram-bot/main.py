@@ -26,10 +26,15 @@ def send_something(message):
 def check(message):
     ...
 
+@bot.message_handler(func=lambda message: message.text == 'Убить')
+def kys(message):
+    bot.stop_polling()
+
 @bot.message_handler(func=lambda message: True)
 def echo_message(message):
     bot.reply_to(message, message.text)
     print(message.chat.id)
+
 
 # eyqwhchdwaprolrf - pswrd
 # 905939371 - айдишник
@@ -58,6 +63,7 @@ def polling():
             print("Error in bot.infinity_polling")
 
 Thread(target=email_checking).start()
-Thread(target=server.start_server).start()
-polling()
+#Thread(target=server.start_server).start()
+#bot.polling()
+print(1)
 
