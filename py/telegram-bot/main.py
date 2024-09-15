@@ -6,7 +6,10 @@ from email_v2 import Email_box
 API_TOKEN = '5570030623:AAFDPz5Z9qkGU9xjfe3BjAOChqV3llOAhPI'
 bot = telebot.TeleBot(API_TOKEN)
 
-emails = {}
+emails = {905939371: Email_box(user="dalepa@edu.hse.ru",
+                               pswrd="eyqwhchdwaprolrf",
+                               server="imap.yandex.ru")}
+'''
 with open('data.txt') as f:
     for row in f:
         s = row.split()
@@ -16,7 +19,7 @@ with open('data.txt') as f:
                                     pswrd=s[3],
                                     server=s[1] if s[1] != '-' else 'imap.yandex.ru')
         except: ...
-
+'''
 @bot.message_handler(commands=['start', 'help', 'good'])
 def send_welcome(message):
 
