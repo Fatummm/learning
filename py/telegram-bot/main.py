@@ -46,9 +46,18 @@ def email_checking():
     start = time.time()
     while True:
         if time.time() - start > 60:
-            checking(bot)
+            try:
+                checking(bot)
+            except:
+                print("Error in email_checking")
+def polling():
+    while True:
+        try:
+            bot.infinity_polling()
+        except:
+            print("Error in bot.infinity_polling")
 
 Thread(target=email_checking).start()
 Thread(target=server.start_server).start()
-bot.infinity_polling()
+polling()
 
