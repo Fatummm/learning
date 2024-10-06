@@ -1,122 +1,69 @@
 #include <iostream>
-#include <memory>
+//#include "useful.cpp"
+#include <vector>
+#include <algorithm>
 #include <string>
-#include <sstream>
+using namespace std;
 
-class Expression {
-public:
-    virtual int Evaluate() const = 0;
-    virtual std::string ToString() const = 0;
-    virtual ~Expression() {}
-};
-
-
-using ExpressionPtr = std::shared_ptr<Expression>;
-
-class Constanta : public Expression {
-private:
-    std::string str_expr;
-    int evaluation;
-    
-public:
-
-    Constanta(int n) : evaluation(n) {
-        std::stringstream ss;
-        ss << evaluation;
-        str_expr = ss.str();
+template <typename T>
+std::istream& operator >> (std::istream& in, std::vector<T>& v) {
+    if (v.size() == 0) {
+        T temp;
+        while (in >> temp) {
+            v.push_back(temp);
+        }
     }
-
-    int Evaluate() const override {
-        return evaluation;
+    else {
+        for (size_t i = 0; i != v.size(); ++i) {
+            in >> v[i];
+        }
     }
-
-    std::string ToString() const override {
-        return str_expr;
-    }
-
-};
-
-ExpressionPtr Const(int n) {
-    return std::make_shared<Constanta>(Constanta(n));
+    return in;
 }
 
-
-
-class Summary : public Expression {
-private:
-    int evaluation;
-    std::string str_expr;
-
-public:
-    Summary(ExpressionPtr first, ExpressionPtr second) :
-        evaluation(first->Evaluate() + second->Evaluate()),
-        str_expr(first->ToString() + " + " + second->ToString()) {
-
+template <typename T>
+std::ostream& operator << (std::ostream& out, std::vector<T>& v) {
+    for (size_t i = 0; i != v.size(); ++i) {
+        if (i != 0) {
+            out << ' '; // вывод разделителя, можно заменить на '\n'
+        }               // или любой другой нужный
+        out << v[i];
     }
-
-
-    int Evaluate() const override {
-        return evaluation;
-    }
-
-    std::string ToString() const override {
-        return str_expr;
-    }
-};
-
-
-
-ExpressionPtr Sum(ExpressionPtr first, ExpressionPtr second) {
-    return std::make_shared<Summary>(Summary(first, second));
+    return out;
 }
 
-
-
-class Multiplication : public Expression {
-private:
-    int evaluation;
-    std::string str_expr;
-public:
-    Multiplication(ExpressionPtr first, ExpressionPtr second) :
-        evaluation(first->Evaluate()* second->Evaluate()) {
-        if (dynamic_cast<Summary*>(first.get())) {
-            str_expr = '(' + first->ToString() + ") * ";
-        }
-        else {
-            str_expr = first->ToString() + " * ";
-        }
-
-        if (dynamic_cast<Summary*>(second.get())) {
-            str_expr += '(' + second->ToString() + ")";
-        }
-        else {
-            str_expr += second->ToString();
-        }
-    }
-
-    int Evaluate() const override {
-        return evaluation;
-    }
-
-    std::string ToString() const override {
-        return str_expr;
-    }
-
-};
-
-ExpressionPtr Product(ExpressionPtr first, ExpressionPtr second) {
-    return std::make_shared<Multiplication>(Multiplication(first, second));
+bool operator < (const pair<int, int>& a, const pair<int, int>& b) {
+    return tie(a.second, a.first) < tie(b.second, b.first);
 }
-
 
 int main() {
+    int m, n;
+    cin >> m;
+    vector<int> q(m);
+    cin >> q;
+    cin >> n;
+    vector<int> a(n);
+    cin >> a;
+    sort(q.begin(), q.end());
+    sort(a.begin(), a.end());
+    reverse(a.begin(), a.end());
+    int ptr = 0;
+    int s = 0, ln = 0;
+    while (ptr != n) {
+        if (ln < q[0]) {
+            s += a[ptr];
+            ln++;
+        }
+        else if (ln == q[0] + 1) {
+            ln = 0;
+        }
+        else {
+            ln++;
+        }
+        ptr++;
+    }
+    cout << s;
 
-    ExpressionPtr ex = Const(5);
-    ExpressionPtr ex1 = Sum(Product(Const(3), Const(4)), Const(5));
-    std::cout << ex1->ToString() << "\n";  // 3 * 4 + 5
-    std::cout << ex1->Evaluate() << "\n";  // 17
-
-    ExpressionPtr ex2 = Product(Const(6), ex1);
-    std::cout << ex2->ToString() << "\n";  // 6 * (3 * 4 + 5)
-    std::cout << ex2->Evaluate() << "\n";  // 102
 }
+
+

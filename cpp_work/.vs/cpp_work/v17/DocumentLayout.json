@@ -7,19 +7,12 @@
       "RelativeMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\animals.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|solutionrelative:animals.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\useful.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|solutionrelative:useful.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\participant_results.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|solutionrelative:participant_results.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\tree.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|solutionrelative:tree.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\xutility||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|solutionrelative:test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,51 +30,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "animals.h",
-              "DocumentMoniker": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\animals.h",
-              "RelativeDocumentMoniker": "animals.h",
-              "ToolTip": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\animals.h",
-              "RelativeToolTip": "animals.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-08T08:52:00.113Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "xutility",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\xutility",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\xutility",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\xutility",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\xutility",
-              "ViewState": "AQIAAOcAAAAAAAAAAAAYwPAAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-09-08T08:36:11.794Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "tree.h",
-              "DocumentMoniker": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\tree.h",
-              "RelativeDocumentMoniker": "tree.h",
-              "ToolTip": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\tree.h",
-              "RelativeToolTip": "tree.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-08T08:11:42.623Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "participant_results.h",
-              "DocumentMoniker": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\participant_results.h",
-              "RelativeDocumentMoniker": "participant_results.h",
-              "ToolTip": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\participant_results.h",
-              "RelativeToolTip": "participant_results.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-08T08:08:09.291Z"
+              "Title": "test.cpp",
+              "DocumentMoniker": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\test.cpp",
+              "RelativeDocumentMoniker": "test.cpp",
+              "ToolTip": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\test.cpp",
+              "RelativeToolTip": "test.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-05T20:03:10.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "useful.cpp",
+              "DocumentMoniker": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\useful.cpp",
+              "RelativeDocumentMoniker": "useful.cpp",
+              "ToolTip": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\useful.cpp",
+              "RelativeToolTip": "useful.cpp",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAkwBwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-29T11:46:43.498Z"
             },
             {
               "$type": "Document",
@@ -91,7 +60,7 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAAAHMAAAA3AAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAAADgAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-08T05:58:03.73Z",
               "EditorCaption": ""

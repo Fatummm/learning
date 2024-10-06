@@ -129,6 +129,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="qsort_example.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="useful.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />
