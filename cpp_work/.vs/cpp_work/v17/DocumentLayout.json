@@ -1,18 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\",
+  "WorkspaceRootPath": "C:\\Users\\ADM\\Documents\\learning\\cpp_work\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|C:\\Users\\ADM\\Documents\\learning\\cpp_work\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\useful.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|solutionrelative:useful.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DC645A71-ECD2-4396-AFFB-8E184E43462A}|cpp_work.vcxproj|solutionrelative:test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,48 +14,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "test.cpp",
-              "DocumentMoniker": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\test.cpp",
-              "RelativeDocumentMoniker": "test.cpp",
-              "ToolTip": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\test.cpp",
-              "RelativeToolTip": "test.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-05T20:03:10.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "useful.cpp",
-              "DocumentMoniker": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\useful.cpp",
-              "RelativeDocumentMoniker": "useful.cpp",
-              "ToolTip": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\useful.cpp",
-              "RelativeToolTip": "useful.cpp",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAkwBwAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-29T11:46:43.498Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\ADM\\Documents\\learning\\cpp_work\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\ADM\\Documents\\GitHub\\fatum\\learning\\cpp_work\\main.cpp",
+              "ToolTip": "C:\\Users\\ADM\\Documents\\learning\\cpp_work\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAACwAAAAAAAAAAAAAADgAAAAfAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAADsAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-08T05:58:03.73Z",
+              "WhenOpened": "2024-10-06T09:11:40.725Z",
+              "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }

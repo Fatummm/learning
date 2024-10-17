@@ -1,8 +1,8 @@
-#include <iostream>
-//#include "useful.cpp"
-#include <vector>
+ï»¿#include <math.h>
 #include <algorithm>
-#include <string>
+#include <iostream>
+#include <vector>
+#include <iomanip>
 using namespace std;
 
 template <typename T>
@@ -25,45 +25,40 @@ template <typename T>
 std::ostream& operator << (std::ostream& out, std::vector<T>& v) {
     for (size_t i = 0; i != v.size(); ++i) {
         if (i != 0) {
-            out << ' '; // âûâîä ðàçäåëèòåëÿ, ìîæíî çàìåíèòü íà '\n'
-        }               // èëè ëþáîé äðóãîé íóæíûé
+            out << '\n'; // Ð²Ñ‹Ð²Ð¾Ð´ Ñ€Ð°Ð·Ð´ÐµÐ»Ð¸Ñ‚ÐµÐ»Ñ, Ð¼Ð¾Ð¶Ð½Ð¾ Ð·Ð°Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ Ð½Ð° '\n'
+        }               // Ð¸Ð»Ð¸ Ð»ÑŽÐ±Ð¾Ð¹ Ð´Ñ€ÑƒÐ³Ð¾Ð¹ Ð½ÑƒÐ¶Ð½Ñ‹Ð¹
         out << v[i];
     }
     return out;
 }
 
-bool operator < (const pair<int, int>& a, const pair<int, int>& b) {
-    return tie(a.second, a.first) < tie(b.second, b.first);
-}
+#define ll long long
+#define ld long double
 
-int main() {
-    int m, n;
-    cin >> m;
-    vector<int> q(m);
-    cin >> q;
-    cin >> n;
-    vector<int> a(n);
-    cin >> a;
-    sort(q.begin(), q.end());
-    sort(a.begin(), a.end());
-    reverse(a.begin(), a.end());
-    int ptr = 0;
-    int s = 0, ln = 0;
-    while (ptr != n) {
-        if (ln < q[0]) {
-            s += a[ptr];
-            ln++;
+int main()
+{
+    ll n, m; cin >> n >> m;
+    vector<vector<ll>> v(n);
+    vector<vector<ll>> ans(n + 1);
+    ans[0].resize(m + 1);
+    for (ll i = 0; i != n; ++i) {
+        v[i].resize(m);
+        cin >> v[i];
+        ans[i + 1].resize(m + 1);
+        for (ll j = 0; j != m; ++j) {
+            ans[i + 1][j + 1] = ans[i + 1][j] + ans[i][j + 1] + v[i][j] - ans[i][j];
         }
-        else if (ln == q[0] + 1) {
-            ln = 0;
-        }
-        else {
-            ln++;
-        }
-        ptr++;
     }
-    cout << s;
-
+    ll t; cin >> t;
+    vector<ll> a(t);
+    for (int i = 0; i != t; ++i) {
+        ll x1, x2, y1, y2; cin >> x1 >> y1 >> x2 >> y2;
+        x1--; x2--; y1--; y2--;
+        a[i] = ans[x2 + 1][y2 + 1] - ans[x1][y2 + 1] - ans[x2 + 1][y1] + ans[x1][y1];
+    }
+    //cout << a;
+    /*for (int i = 0; i != n + 1; ++i) {
+        cout << ans[i] << endl;
+    }*/
+    cout << a;
 }
-
-
